@@ -113,6 +113,17 @@ app.get('/user', function (request, response) {
     }
   });
 });
+
+app.get('/userApi', function (request, response) {
+  var connectUsers = db.model("users", user);
+  connectUsers.find({}, function (err, users) {
+    if (err) {
+      console.log(err);
+    } else {
+      response.json(users);
+    }
+  });
+});
 // xoa
 app.post('/:id',function (request,respone) {
   connectUsers = db.model("users", user);
