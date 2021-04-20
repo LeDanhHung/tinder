@@ -1,0 +1,43 @@
+<div class="container">
+    <form action="/updateUser/{{id}}" enctype="multipart/form-data" method="post">
+        <h2 class="text-center"><strong>E</strong>dit.</h2>
+        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
+        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+        <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+        <div class="form-group"><input class="form-control" type="password" name="password-repeat"
+                placeholder="Password (repeat)"></div>
+    
+    
+        <div class="form-group">
+    
+            <div class="form-group"><input class="form-control" name="date" id="hire-date" type="date">
+            <input type="text" name="" value="{{id}}" id="">
+    
+            </div>
+            <div class="form-group"><input class="form-control" type="text" name="sothich" placeholder="Sở Thích"></div>
+            <div class="form-group"><textarea placeholder="Giới Thiệu Bản Thân" class="form-control" name="gioithieu"
+                    id="message"></textarea></div>
+            <div class="form-group">
+                <input type="file" multiple="multiple" name="avatars">
+            </div>
+            <div class="form-group">
+                <label for="GioiTinh">Giới Tính</label>
+                <div class="form-row-12">
+                    <div class="form-check mb-6">
+                        <input id="nam" name="gioitinh" type="radio" class="form-check-input" value="nam" />
+                        <label id="_label" class="form-check-label" for="">Nam</label>
+                    </div>
+                    <div class="form-check mb-6">
+                        <input id="nu" name="gioitinh" type="radio" class="form-check-input" value="nu" />
+                        <label id="_label" class="form-check-label" for="">Nữ</label>
+                    </div>
+                </div>
+            </div>
+            <form class="row" method="post" action="/updateUser" enctype="multipart/form-data">
+                {{!-- <input name="_id" value="{{this._id}}" /> --}}
+                <button type="submit">Sửa</button>
+            </form>
+    
+        </div>
+    </form>
+</div>

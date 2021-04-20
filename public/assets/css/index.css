@@ -1,0 +1,24 @@
+.bg-image {
+  background-image: url("https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.validity-error {
+  background-color: red;
+}
+.notify-error {
+  display: none;
+  color: red;
+  margin-top: 5px;
+  font-size: 13px;
+}
+.img-avatar {
+  height: 120px;
+  width: 150px;
+}
+.input {
+  width: 100px;
+}
+.form-control{
+ width: auto;
+}
