@@ -163,43 +163,43 @@ app.post("/updateUser/:id", (req, res, next) => {
 
 });
 
-function statusCode(code = undefined, message = undefined, data = undefined) {
-  return (baseJson = {
-    code: code,
-    message: message,
-    data: data,
-  });
-}
+// function statusCode(code = undefined, message = undefined, data = undefined) {
+//   return (baseJson = {
+//     code: code,
+//     message: message,
+//     data: data,
+//   });
+//}
 //them user 
-router.get("/themUser", function (req, res, next) {
-  upload(req, res, function (err) {
-    if (err instanceof multer.MulterError) {
-      res.send(err);
-    } else if (err) {
-      res.json(statusCode(400, err));
-    } else {
-      
-      const user = new Schema({
-        // userName, password,… viết theo đối tượng trên csdl
-        name: req.body.name,
-        password: req.body.password,
-        date: req.body.date,
-        email: req.body.email,
-        gioitinh: req.body.gioitinh,
-        sothich: req.body.sothich,
-        gioithieu: req.body.gioithieu,
-      //  avatars: req.files.map((file) => "upload/" + file.filename),
-      });
-      user.save(function (err) {
-        // lỗi không thể thêm
-        if (err) res.json(statusCode(500, "Server Error", err));
-        // thêm thành công
-        else res.json(statusCode(200, "Success", user));
-      });
-    }
-  });
+// router.get("/themUser", function (req, res, next) {
+//   upload(req, res, function (err) {
+//     if (err instanceof multer.MulterError) {
+//       res.send(err);
+//     } else if (err) {
+//       res.json(statusCode(400, err));
+//     } else {
+//       // userSchema thay bằng schema giống ở hàm update làm ở lab67
+//       const user = new Schema({
+//         // userName, password,… viết theo đối tượng trên csdl
+//         name: req.body.name,
+//         password: req.body.password,
+//         date: req.body.date,
+//         email: req.body.email,
+//         gioitinh: req.body.gioitinh,
+//         sothich: req.body.sothich,
+//         gioithieu: req.body.gioithieu,
+//       //  avatars: req.files.map((file) => "upload/" + file.filename),
+//       });
+//       user.save(function (err) {
+//         // lỗi không thể thêm
+//         if (err) res.json(statusCode(500, "Server Error", err));
+//         // thêm thành công
+//         else res.json(statusCode(200, "Success", user));
+//       });
+//     }
+//   });
 
-});
+// });
 
 
 
