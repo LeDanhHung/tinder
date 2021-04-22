@@ -44,9 +44,9 @@
                             <a href="/edit/{{this._id}}">Sửa</a>
                             <img src="{{this.avatars}}" alt="" srcset="">
                            <div class="col-lg-13"></div>
-                                <form class="row" method="post" action="/{{this._id}}" enctype="multipart/form-data">
+                                <form class="row" method="POST" action="/deleteUser">
                                     {{!-- <input name="_id" value="{{this._id}}" /> --}}
-                                    <button type="submit">Xóa</button>
+                                    <button type="submit" name="_id" value={{this._id}} >Xóa</button>
                                    
                                 </form>
                            </div>
